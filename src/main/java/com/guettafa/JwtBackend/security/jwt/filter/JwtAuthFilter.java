@@ -76,7 +76,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                 // Create an instance that "Made the user officially approved"
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                         userDetails,
-                        null,
+                        null, // because we are using authorities instead ( Roles )
                         userDetails.getAuthorities()
                 );
 
